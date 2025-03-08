@@ -5,15 +5,9 @@ import subprocess
 import json
 import os
 
-
 bitcoin_cli = os.environ.get('CLI')
 
 def run_cli_command(command_args):
-    """
-    Run a bitcoin-cli command with the given arguments.
-    Returns the stdout output as a string if successful,
-    or exits with an error if the command fails.
-    """
     result = subprocess.run(command_args,
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE,
